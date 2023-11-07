@@ -1,0 +1,5 @@
+/* CSS TO CENTER THE IMAGE IN THE CLASS qr_code_generated */
+.qr_code_generated {
+    display: flex;
+    justify-content: center;
+}
