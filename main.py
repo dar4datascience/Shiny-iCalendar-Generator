@@ -1,10 +1,10 @@
 
-import icalendar
-import pytz
-import qrcode
-import shinyswatch
-import shiny 
-import subprocess
+# import icalendar
+# import pytz
+# import qrcode
+# import shinyswatch
+# import shiny 
+# import subprocess
 
 
 if __name__ == "__main__":
