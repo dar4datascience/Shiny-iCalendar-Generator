@@ -16,9 +16,13 @@ import ipywidgets as widgets
 from ical_2_qr import create_event_qr
 from adhoc_datetime_maker import make_datetime
 
+import os
+
+firebase_api_key = os.getenv('firebase_api_key')
+
 google_firebase_auth_js = """
   var config = {
-    apiKey: "",
+    apiKey: "{firebase_api_key}",
     authDomain: "shiny-buildpack-demo.firebaseapp.com",
   };
   firebase.initializeApp(config);
@@ -73,6 +77,10 @@ app_ui = ui.page_navbar(
     #     ui.tags.link(rel="stylesheet", href="styles.css")
     # ),
    # ui.include_css(css_path),
+       ui.head_content(ui.tags.title("Demo Shiny Python"),
+                    # add JS for authentication
+                    ui.tags.script(src="https://www.gstatic.com/firebasejs/8.0/firebase.js"),
+                     ui.tags.script(google_firebase_auth_js),),
        shinyswatch.theme.cyborg(),
     ui.nav(
         "Make iCalendar Event",
@@ -121,10 +129,6 @@ app_ui = ui.page_navbar(
             ),
         ),
     ),
-    ui.head_content(ui.tags.title("Demo Shiny Python"),
-                    # add JS for authentication
-                    ui.tags.script(src="https://www.gstatic.com/firebasejs/8.0/firebase.js"),
-                     ui.tags.script(google_firebase_auth_js),),
     title="Shiny iCalendar",
 )
 
