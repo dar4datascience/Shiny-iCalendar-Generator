@@ -12,3 +12,11 @@ Single event use. Test deployment via shinylive
 - [ ] Download ics file
 - [ ] Allow logo input to center
 - [ ] Deploy github Pages
+
+## Cloud Buildpack
+
+ - Procfile not detected to run shiny
+
+ - specifiy entrypoint in GOOGLE_ENTRYPOINT doesnt work
+
+ - test with creating main.py
