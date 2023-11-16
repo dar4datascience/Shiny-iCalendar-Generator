@@ -1,6 +1,6 @@
 # https://pypi.org/
 shiny
-qr
+qrcode
 pytz
 icalendar
 shinyswatch
