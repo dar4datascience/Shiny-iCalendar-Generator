@@ -5,3 +5,4 @@ pytz
 icalendar
 shinyswatch
 ipywidgets
+uvicorn[standard]
