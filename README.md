@@ -19,4 +19,16 @@ Single event use. Test deployment via shinylive
 
  - specifiy entrypoint in GOOGLE_ENTRYPOINT doesnt work
 
- - test with creating main.py
+ - test with creating main.py ALONG WITH procfile WORKS!
+
+ git clone https://github.com/dar4datascience/Shiny-iCalendar-Generator.git
+
+ cd Shiny-iCalendar-Generator/
+
+ pack build --builder=gcr.io/buildpacks/builder sample-shiny
+
+ docker run -it -e PORT=8080 -p 8080:8080 sample-shiny
+
+ pack build --builder=gcr.io/buildpacks/builder sample-shiny
+
+ gcloud beta run deploy --source .
