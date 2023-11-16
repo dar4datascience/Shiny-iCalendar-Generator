@@ -1,0 +1,1 @@
+web: shiny run app.py --launch-browser

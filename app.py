@@ -13,8 +13,6 @@ import shinyswatch
 from shiny import App, Inputs, Outputs, Session, render, reactive, ui
 from shiny.types import ImgData
 import ipywidgets as widgets
-from shinywidgets import output_widget, reactive_read, render_widget
-
 from ical_2_qr import create_event_qr
 from adhoc_datetime_maker import make_datetime
 
