@@ -20,12 +20,12 @@ import os
 
 firebase_api_key = os.getenv('firebase_api_key')
 
-google_firebase_auth_js = """
-  var config = {
-    apiKey: "{firebase_api_key}",
-    authDomain: "shiny-buildpack-demo.firebaseapp.com",
-  };
-  firebase.initializeApp(config);
+google_firebase_auth_js = f"""
+    var config = {{
+        apiKey: {firebase_api_key},
+        authDomain: "shiny-buildpack-demo.firebaseapp.com",
+    }};
+    firebase.initializeApp(config);
 """
 
 # A card component wrapper.
